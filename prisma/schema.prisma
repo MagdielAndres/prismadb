@@ -19,3 +19,12 @@ model explorer {
   dateCreated DateTime @default(now())
   lastUpdated DateTime @updatedAt
 }
+
+model missionComander {
+  id Int @id @default(autoincrement())
+  name String @unique
+  username String @db.VarChar(255)
+  mainStack String @db.VarChar(255)
+  currentEnrollment Boolean @default(false)
+  hasAzureCertification Boolean @default(false)
+}
